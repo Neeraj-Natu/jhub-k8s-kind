@@ -6,13 +6,26 @@ There are two flavours of `k8s` both are installed using [kind](https://kind.sig
 There is no pre-built `LoadBalancer` for any bare-metal `k8s` installation, thus we could either use port-forwarding or have a functionality that emulates creating a network load-balancer as in any cloud provider.
 
 <br>
+
+---
+## Pre-Requisities
+
+* [Docker-Desktop](https://www.docker.com/products/docker-desktop/) this is needed for `kind` as it uses docker containers as nodes in cluster.
+
+* [kubectl binary.](https://kubernetes.io/docs/tasks/tools/)
+
+* [helm binary.](https://helm.sh/docs/intro/install/)
+
+* [istioctl binary](https://istio.io/latest/docs/setup/install/istioctl/) (needed only for network-loadbalancer type installation).
+
+* No Proxy setup or installed.
+
 <br>
 
 ---
 
-### These create the two flavours of installation:
+### Below are the two flavours of installation:
 
-<br>
 <br>
 
 **Flavour-1 :** 
@@ -21,7 +34,7 @@ There is no pre-built `LoadBalancer` for any bare-metal `k8s` installation, thus
 Here we forward certain port from the kind-k8s cluster.<br>
 The entire kind cluster uses docker images as nodes,also these docker images donot allow access to the network from bare-metal.<br>
 
-check [port-forwading](./) folder for installation instructions.
+check [port-forwading](./port-forwarding/) folder for installation instructions.
 </p>
 
 ---

@@ -32,8 +32,6 @@ spec:
         nodeSelector:
           "ingress-ready": "true"
         tolerations:
-        - key: ingress-ready
-          operator: Exists
         - key: node-role.kubernetes.io/control-plane
           operator: Exists
     egressGateways:
