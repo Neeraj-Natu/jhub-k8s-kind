@@ -1,7 +1,6 @@
 # jhub-k8s-kind
 
 This Repo contains all tools to install jupyterhub on k8s locally
-<br>
 There are two flavours of `k8s` both are installed using [kind](https://kind.sigs.k8s.io/).
 
 <br>
