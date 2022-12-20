@@ -27,14 +27,9 @@ jupyterhub chart from [zero to Jhub](https://z2jh.jupyter.org/) this also has mi
 
 The nginx ingress gateway which maps all requests to proxy-public service.
 
-
-
-
-
----
-
 <br>
 
+---
 ## Pre-Requisities
 
 * [Docker-Desktop](https://www.docker.com/products/docker-desktop/) this is needed for `kind` as it uses docker containers as nodes in cluster.
