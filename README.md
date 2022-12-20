@@ -1,12 +1,13 @@
 # jhub-k8s-kind
 
-<p>This Repo contains all tools to install jupyterhub on k8s locally.<br>
-There are two flavours of `k8s` both are installed using [kind](https://kind.sigs.k8s.io/).</p>
+This Repo contains all tools to install jupyterhub on k8s locally
+<br>
+There are two flavours of `k8s` both are installed using [kind](https://kind.sigs.k8s.io/).
 
 <br>
 <br>
 
-<p>There is no pre-built `LoadBalancer` for any bare-metal `k8s` installation, thus we could either use port-forwarding or have a functionality that emulates creating a network load-balancer as in any cloud provider.</p>
+There is no pre-built `LoadBalancer` for any bare-metal `k8s` installation, thus we could either use port-forwarding or have a functionality that emulates creating a network load-balancer as in any cloud provider.
 
 <br>
 <br>
@@ -24,7 +25,7 @@ There are two flavours of `k8s` both are installed using [kind](https://kind.sig
 Here we forward certain port from the kind-k8s cluster.<br>
 The entire kind cluster uses docker images as nodes,also these docker images donot allow access to the network from bare-metal.<br>
 
-check [port-forwading](./port-forwarding/) folder for installation instructions.
+check [port-forwading](./) folder for installation instructions.
 </p>
 
 ---
