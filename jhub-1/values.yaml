@@ -1,0 +1,14 @@
+# Default values for jhub-1.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+jupyterhub:
+  # prePuller relates to the hook|continuous-image-puller DaemonsSets
+  prePuller:
+    revisionHistoryLimit:
+    labels: {}
+    annotations: 
+      sidecar.istio.io/inject: "false"
+
+  proxy:
+    service:
+      type: ClusterIP
