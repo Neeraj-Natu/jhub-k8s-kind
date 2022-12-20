@@ -1,11 +1,8 @@
 # jhub-k8s-kind
 
-This Repo contains all tools to install jupyterhub on k8s locally
+This Repo contains all tools to install jupyterhub on k8s locally.
 There are two flavours of `k8s` both are installed using [kind](https://kind.sigs.k8s.io/).
-
 <br>
-<br>
-
 There is no pre-built `LoadBalancer` for any bare-metal `k8s` installation, thus we could either use port-forwarding or have a functionality that emulates creating a network load-balancer as in any cloud provider.
 
 <br>
