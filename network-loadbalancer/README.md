@@ -30,9 +30,13 @@ jupyterhub chart from [zero to Jhub](https://z2jh.jupyter.org/) this also has mi
 
 The istio profile changes which are needed for proper installtion of istio.
 
+<br>
+
 **istio-ingress**
 
 The istio ingress gateway chart to install the istio-ingress gateway.
+
+<br>
 
 
 **metallb.yaml**
@@ -55,7 +59,6 @@ kind create cluster --name=cluster-2 --config=kind-config.yaml
 
 * Install `metallb` following instructions from [kind-website](https://kind.sigs.k8s.io/docs/user/loadbalancer/).
 
-|
 
     ```
     kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.13.7/config/manifests/metallb-native.yaml
