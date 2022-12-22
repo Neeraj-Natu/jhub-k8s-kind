@@ -4,14 +4,14 @@
 This Installation contains below directory structure :
 
 ```
-jhub-1                           ## Jupyterhub Chart
+jhub                             ## Jupyterhub Chart
 kind-config.yaml                 ## Cluster configuration with port-forwarding and node-label
 nginx-ingress-gateway.yaml       ## nginx ingress gateway manifest to add routes 
 ```
 
 <br>
 
-**jhub-1 :** 
+**jhub :** 
 
 jupyterhub chart from [zero to Jhub](https://z2jh.jupyter.org/) this also has minimal changes to `values.yaml` to get the chart working locally with ingress.
 
@@ -63,19 +63,19 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main
 * Next create the right namespace for jupyter-Hub chart
 
 ```
-kubectl create ns jhub-1
+kubectl create ns j-hub
 ```
 
 * Next install the `nginx-ingress-gateway`.
 
 ```
-kubectl apply -f nginx-ingress-gateway.yaml -n jhub-1
+kubectl apply -f nginx-ingress-gateway.yaml -n j-hub
 ```
 
 * Next install the jhub-1 helm chart in corresponding namespace.
 
 ```
-helm install jhub-1 -n jhub-1 ./jhub-1
+helm install jhub -n j-hub ./jhub
 ```
 
 * The Jupyterhub should now be available on `http://localhost:8080/hub/`

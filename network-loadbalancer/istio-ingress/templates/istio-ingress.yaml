@@ -3,7 +3,7 @@ kind: Gateway
 metadata:
   name: istio-ingress
   namespace: j-hub
-  label:
+  labels:
     component: gateway
 spec:
   selector:
@@ -15,13 +15,12 @@ spec:
       protocol: HTTP
     hosts:
     - "*"
-  - port:
-      number: 443
-      name: https-443
-      protocol: HTTPS
-    hosts:
-    - "*"
-    tls:
-      mode: SIMPLE # enables HTTPS on this port
-      serverCertificate: /etc/certs/servercert.pem
-      privateKey: /etc/certs/privatekey.pem
+#  - port:
+#      number: 443
+#      name: https-443
+#      protocol: HTTPS
+#    hosts:
+#    - "*"
+#    tls:
+#      mode: SIMPLE # enables HTTPS on this port
+#      credentialName: istio-ingress

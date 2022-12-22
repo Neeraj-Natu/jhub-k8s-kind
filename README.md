@@ -41,6 +41,8 @@ check [port-forwading](./port-forwarding/) folder for installation instructions.
 
 **Flavour-2 :** 
 
+**_Note this only works on Linux_**
+
 **<p>Network LoadBalancer<br>**
 Here we first install a network load-balancer on the kind-k8s cluster and assign it the IP address pool to expose it.<br>
 [metallb](https://metallb.universe.tf/) is the network loadbalancer that is installed in the demo, this makes sure we can create a service of type `LoadBalancer` in k8s cluster.

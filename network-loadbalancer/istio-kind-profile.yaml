@@ -28,12 +28,6 @@ spec:
     ingressGateways:
     - name: istio-ingressgateway
       enabled: true
-      k8s:
-        nodeSelector:
-          "ingress-ready": "true"
-        tolerations:
-        - key: node-role.kubernetes.io/control-plane
-          operator: Exists
     egressGateways:
     - name: istio-egressgateway
       enabled: false
@@ -53,7 +47,7 @@ spec:
     global:
       istioNamespace: istio-system
       istiod:
-        enableAnalysis: false
+        enableAnalysis: true
       logging:
         level: "default:debug"
       logAsJson: false
@@ -106,7 +100,7 @@ spec:
       defaultNodeSelector: {}
       configValidation: true
       multiCluster:
-        enabled: false
+        enabled: true
         clusterName: ""
       omitSidecarInjectorConfigMap: false
       network: ""
@@ -170,23 +164,9 @@ spec:
         autoscaleEnabled: true
         type: ClusterIP
         name: istio-egressgateway
-        secretVolumes:
-          - name: egressgateway-certs
-            secretName: istio-egressgateway-certs
-            mountPath: /etc/istio/egressgateway-certs
-          - name: egressgateway-ca-certs
-            secretName: istio-egressgateway-ca-certs
-            mountPath: /etc/istio/egressgateway-ca-certs
 
       istio-ingressgateway:
         autoscaleEnabled: true
         type: LoadBalancer
         name: istio-ingressgateway
         env: {}
-        secretVolumes:
-          - name: ingressgateway-certs
-            secretName: istio-ingressgateway-certs
-            mountPath: /etc/istio/ingressgateway-certs
-          - name: ingressgateway-ca-certs
-            secretName: istio-ingressgateway-ca-certs
-            mountPath: /etc/istio/ingressgateway-ca-certs

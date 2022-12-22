@@ -8,8 +8,7 @@ spec:
   gateways:
   - j-hub/istio-ingress
   http:
-  - name: "all-routes"
-    match:
+  - match:
     - uri:
         prefix: "/"
     route:
